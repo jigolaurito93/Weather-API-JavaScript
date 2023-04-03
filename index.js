@@ -49,7 +49,29 @@ cityCondition.className = 'text-white text-center lead mt-3';
 cityCondition.innerHTML = 'Cloudy'  ;
 console.log(cityCondition);
 
+let cityTime = document.createElement('h2');
+cityTime.id = 'cityTime';
+cityTime.className = 'text-white text-center lead mt-3';
+cityTime.innerHTML = '2023-04-03 10:26'  ;
+console.log(cityTime);
+
+let cityWind = document.createElement('h2');
+cityWind.id = 'cityWind';
+cityWind.className = 'text-white text-center lead mt-3';
+cityWind.innerHTML = '9.8 mph'  ;
+console.log(cityWind);
+
+let cityPic = document.createElement('h2');
+cityPic.id = 'cityPic';
+cityPic.className = 'text-white text-center lead mt-3';
+cityPic.innerHTML = ''  ;
+console.log(cityPic);
+
 let nextt = document.getElementById('cityForm');
+
+nextt.after(cityPic)
+nextt.after(cityWind)
+nextt.after(cityTime)
 nextt.after(cityCondition)
 nextt.after(cityTemp)
 nextt.after(cityTitle)
@@ -67,8 +89,14 @@ async function buildCityCard(cityObj){
     cityTitle.innerHTML = cityObj.location.name ;
     // console.log(cityTitle);
     cityTemp.innerHTML = ` ${cityObj.current.temp_f} &deg;F `;
-    cityCondition.innerHTML = cityObj.current.condition.text
+    cityCondition.innerHTML = cityObj.current.condition.text;
+    cityTime.innerHTML = cityObj.location.localtime;
+    cityWind.innerHTML = `${cityObj.current.wind_mph} mph`;
+    cityPic.innerHTML = cityObj.current.condition.icon;
 
+    
+
+    
     // let nextt = document.getElementById('cityForm');
     // nextt.after(cityTitle)
 
