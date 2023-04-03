@@ -1,0 +1,17 @@
+#cityTitle {
+    margin-top: 80px;
+    font-size: 80px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+}
+
+#cityTemp {
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#cityCondition{
+    font-size: 25px ;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+}
